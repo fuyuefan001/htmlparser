@@ -18,7 +18,7 @@ def crawl(string):
     # hp_ins.feed(data=html)
     # hp_ins.dataslice=[]
     for res in result1:
-        # print(res)
+        print(res)
         hp_ins.dataslice = []
         hp_ins.feed(data=str(res))
         comment.append(hp_ins.dataslice)
@@ -48,7 +48,7 @@ class hp(HTMLParser):
 
 if __name__ == "__main__":
     url='https://www.amazon.com/Intel-i7-8700-Desktop-Processor-Cores/product-reviews/B07598HLB4/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
-    # html=url2html(url)
+    html=url2html(url)
 
     fp= open('html.txt','r')
     html=fp.read()
