@@ -13,7 +13,7 @@ def url2html(url):
 
 def crawl(string):
     soup1 = BeautifulSoup(string,'html')
-    result1 = soup1.find_all(attrs={"class":"a-expander-content reviewText review-text-content a-expander-partial-collapse-content"})
+    result1 = soup1.find_all(attrs={"data-hook":"review-body"})
     hp_ins=hp()
     # hp_ins.feed(data=html)
     # hp_ins.dataslice=[]
@@ -50,11 +50,11 @@ if __name__ == "__main__":
     url='https://www.amazon.com/Intel-i7-8700-Desktop-Processor-Cores/product-reviews/B07598HLB4/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
     html=url2html(url)
 
-    fp= open('html.txt','r')
-    html=fp.read()
+    # fp= open('html.txt','r')
+    # html=fp.read()
     # print(html)
-    # with open('html.txt','w',encoding="utf-8") as fp:
-    #     fp.write(html)
+    with open('html.txt','w',encoding="utf-8") as fp:
+        fp.write(html)
 
     crawl(str(html))
     with open('comments.txt','w') as fp:
