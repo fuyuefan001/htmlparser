@@ -14,7 +14,8 @@ setup(
     install_requires=[
         'requests>=2.21.0',
         'setuptools>=16.0',
-        'bs4>=0.0.1'
+        'bs4>=0.0.1',
+        'praw'
     ],
     zip_safe=False
 )
