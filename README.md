@@ -1,6 +1,19 @@
-# htmlparser
-#The program can get the html script from the url and parse
-#assume the page is an amazon item page for example
-#https://www.amazon.com/Intel-i7-8700-Desktop-Processor-Cores/product-reviews/B07598HLB4/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews
-#html.txt is the html script of the webpage
-#comments.txt is comments that extracted from the script
+CODE:
+
+
+redditparser.py is based on reddit's official API and the data structure has been automatically build, 
+
+the only thing I need to do is extract the text from the object. IT ONLY WORKS WITH REDDIT 
+
+
+htmlparser.py is based on parsing the html script of a webpage, which can be applied to other kinds of websites other than reddits . 
+
+you can search any data in the html scripts with specified 'attrs' and 'fields'
+
+FOR EXAMPLE, THIS WORKS WITH AMAZON ITEM PAGE
+
+
+
+OUTPUT:
+
+redditcomment.txt is generated with redditparser.py
